@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Yoga & Meditation",
+      "description": "Discover inner peace and well-being through yoga and meditation practices. Join our experienced instructors for rejuvenating sessions that focus on physical and mental wellness. Suitable for all levels.",
+      "image": "https://i.ibb.co/3dML39M/full-shot-man-stretching-indoor.jpg",
+      "organize_date": "Every Saturday at 9:00 AM",
+      "location": "Zen Wellness Center, 123 Main St, Anytown, USA",
+      "cost": "$20 per session",
+      "what_to_expect": "Experience improved flexibility, reduced stress, and enhanced mindfulness. Connect with a community of like-minded individuals."
+    },
+    {
+      "id": 2,
+      "name": "Fitness & Nutrition",
+      "description": "Transform your health with fitness routines and nutritious eating habits. Our fitness experts and nutritionists provide guidance to help you achieve your wellness goals.",
+      "image": "https://i.ibb.co/n7bMSz7/jonathan-borba-R0y-b-EUji-OM-unsplash.jpg",
+      "organize_date": "Weekly on Tuesdays and Thursdays at 6:30 PM",
+      "location": "Fit Life Gym, 456 Fitness Blvd, Healthville, USA",
+      "cost": "$10 per session",
+      "what_to_expect": "Get fit, lose weight, and develop healthier eating habits. Receive personalized fitness plans and nutritional advice."
+    },
+    {
+      "id": 3,
+      "name": "Mindfulness & Stress Relief",
+      "description": "Learn techniques to manage stress and increase mindfulness in daily life. Our workshops offer practical tools for stress reduction and emotional well-being.",
+      "image": "https://i.ibb.co/1KrjLKL/lesly-juarez-DFtj-XYd5-Pto-unsplash-1.jpg",
+      "organize_date": "Monthly workshops, next on October 15th at 2:00 PM",
+      "location": "Serenity Spa & Wellness, 789 Tranquil Dr, Calmtown, USA",
+      "cost": "$30 per workshop",
+      "what_to_expect": "Discover a calmer mind, reduced anxiety, and improved focus. Gain mindfulness practices to use in your daily routines."
+    },
+    {
+      "id": 4,
+      "name": "Holistic Health",
+      "description": "Explore holistic approaches to wellness, including alternative therapies. Our seminars delve into natural healing methods and holistic living.",
+      "image": "https://i.ibb.co/0KfWgcr/christin-hume-0-Mo-F-Fe0w0-A-unsplash.jpg",
+      "organize_date": "Bi-monthly seminars, next on November 5th at 10:00 AM",
+      "location": "Holistic Haven, 567 Harmony Ave, Balancedville, USA",
+      "cost": "$50 per seminar",
+      "what_to_expect": "Learn about alternative healing, holistic nutrition, and holistic lifestyle choices. Take steps towards a balanced and vibrant life."
+    },
+    {
+      "id": 5,
+      "name": "Wellness Retreats",
+      "description": "Indulge in wellness retreats for a complete rejuvenation experience. Immerse yourself in relaxation, self-discovery, and holistic wellness practices.",
+      "image": "https://i.ibb.co/Smq6HVs/kaylee-garrett-Gapr-Wy-Iw66o-unsplash.jpg",
+      "organize_date": "Upcoming retreat: November 18-20, 2023",
+      "location": "Tranquil Retreat Center, 111 Peaceful Rd, Serenityville, USA",
+      "cost": "$500 for the full retreat",
+      "what_to_expect": "Experience a weekend of self-care, yoga, mindfulness, and healthy meals. Recharge your body and mind in a serene natural setting."
+    },
+    {
+      "id": 6,
+      "name": "Mental Health & Self-Care",
+      "description": "Prioritize your mental health and self-care with expert guidance. Join our support group meetings to foster emotional well-being and resilience.",
+      "image": "https://i.ibb.co/sVJ2xJW/marcel-strauss-fzqxo-FJyti-E-unsplash.jpg",
+      "organize_date": "Bi-weekly support group meetings, next on October 10th at 7:00 PM",
+      "location": "Mindful Moments Center, 222 Serene St, Peaceful City, USA",
+      "cost": "Free for all participants",
+      "what_to_expect": "Find a safe and supportive space to discuss mental health topics. Gain coping strategies and a sense of community."
+    }
+  ]
+  
