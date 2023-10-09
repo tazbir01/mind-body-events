@@ -2,7 +2,7 @@
 const FeaturedSection = () => {
     return (
         <div className="p-10">
-            <h2 className="text-4xl font-bold text-center mt-20 mb-10">Featured Experiences</h2>
+            <h2 className="text-4xl font-bold text-center mt-10 mb-10">Featured Experiences</h2>
             <div className="text-slate-500 space-y-2">
                 <p><span className="font-medium">Event Discovery:</span> Explore a diverse selection of wellness events handpicked to nourish your mind, body, and spirit. Whether you&#39;re a yoga enthusiast or a mindfulness practitioner, find the perfect event for your wellness journey.</p>
                 <p><span className="font-medium">Easy Registration:</span> Secure your spot with a few clicks. Register for events hassle-free, receive e-tickets, and manage your bookings effortlessly.</p>

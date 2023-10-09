@@ -2,7 +2,7 @@
 const AboutUs = () => {
     return (
         <div className="p-10">
-            <h2 className="text-4xl font-bold text-center mt-20 mb-10">About Us</h2>
+            <h2 className="text-4xl font-bold text-center mt-10 mb-10">About Us</h2>
             <div className="text-slate-500">
                 <div className="space-y-2">
                     <p><span className="font-medium">Mission Statement:</span> Our Mission: Empowering individuals to lead healthier, happier lives through access to transformative wellness experiences.</p>

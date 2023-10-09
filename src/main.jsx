@@ -10,6 +10,8 @@ import Root from './Pages/Root/Root';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import ServiceDetails from './Pages/Section/ServiceDetails/ServiceDetails';
+import AuthProvder from './Provider/AuthProvder';
+
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
         loader: () => fetch("/public/data.json")
       },
       {
-        path:"/details/:id",
+        path: "/details/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: () => fetch("/public/data.json")
       },
@@ -40,6 +42,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvder>
+      <RouterProvider router={router} />
+    </AuthProvder>
   </React.StrictMode>,
 )

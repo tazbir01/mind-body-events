@@ -14,7 +14,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Header></Header>
             {/* service section */}
-            <h2 className="text-4xl font-bold text-center my-20">Services</h2>
+            <h2 className="text-4xl font-bold text-center mt-20 mb-10">Services</h2>
             <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
                 {
                     services.map(service => <OurService key={service.id} service={service}></OurService>)
@@ -23,7 +23,7 @@ const Home = () => {
 
             {/* featured section */}
             <FeaturedSection></FeaturedSection>
-            
+
             {/* about us section */}
             <AboutUs></AboutUs>
 
