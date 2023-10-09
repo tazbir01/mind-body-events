@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
+import { Link } from "react-router-dom";
 
 const Register = () => {
     const {creatUser} = useContext(authContext)
@@ -50,6 +51,7 @@ const Register = () => {
                                 <button className="btn btn-primary">Register</button>
                             </div>
                         </form>
+                        <p className="font-medium text-center">Have An Acount? <Link className="font-bold" to="/login">Login</Link></p>
                     </div>
                 </div>
             </div>

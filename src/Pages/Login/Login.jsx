@@ -1,9 +1,14 @@
 import { useContext } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const {logInUser} = useContext(authContext)
+    const location = useLocation()
+    console.log(location)
+    const navigate = useNavigate()
+
     const handleLoginForm = e =>{
         e.preventDefault()
         const email = e.target.email.value
@@ -13,6 +18,7 @@ const Login = () => {
         logInUser(email, password)
         .then(result => {
             console.log(result.user)
+            navigate(location?.state ? location.state : "/")
         })
         .catch(error => {
             console.log(error.message)
@@ -47,6 +53,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        <p className="text-center font-medium">Don&#39;t Have An Acount? <Link className="font-bold" to="/register">Register</Link></p>
                     </div>
                 </div>
             </div>
