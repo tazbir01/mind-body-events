@@ -1,33 +1,61 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-    const {creatUser} = useContext(authContext)
-    const handleRegisterForm = (e) => {
-        e.preventDefault()
-        const email = e.target.email.value 
-        const password = e.target.password.value 
-        console.log(email, password)
+    const [errorMessage, setErrorMessage] = useState('')
+    const { creatUser, logInWithGoogle } = useContext(authContext)
 
-        creatUser(email, password)
+
+    const handleGoogleLogIn = () =>{
+        logInWithGoogle()
         .then(result => {
-            console.log(result.user)
+            console.log(result.message)
         })
         .catch(error => {
             console.log(error.message)
         })
     }
+
+    const handleRegisterForm = (e) => {
+        e.preventDefault()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log(email, password)
+
+        setErrorMessage('')
+
+        if (password.length < 6) {
+            setErrorMessage("Please give 6 character password or more.")
+            return;
+        }else if (! /[A-Z]/.test(password)){
+            setErrorMessage("Please add any upperchase character")
+            return;
+        }else if (! /[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)){
+            setErrorMessage("Please add any speacial character")
+            return;
+        }
+
+        creatUser(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
+
     return (
         <div>
             <Navbar></Navbar>
-            <div className=" min-h-screen bg-base-200">
+            <div className="flex flex-col bg-base-200">
                 <div className=" flex-col ">
                     <div className="text-center">
-                        <h1 className="text-5xl font-bold pt-14 mb-10">Register</h1>
+                        <h1 className="text-5xl font-bold pt-10 mb-6">Register</h1>
                     </div>
-                    <div className="md:card flex-shrink-0 md:max-w-2xl mx-auto md:shadow-2xl bg-base-100">
+                    <div className="md:card flex-shrink-0 md:max-w-2xl mx-auto md:shadow-2xl bg-base-100 mb-10">
                         <form onSubmit={handleRegisterForm} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -47,11 +75,18 @@ const Register = () => {
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             </div>
+                            {
+                                errorMessage && <p>*{errorMessage}</p>
+                            }
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
                         </form>
                         <p className="font-medium text-center">Have An Acount? <Link className="font-bold" to="/login">Login</Link></p>
+                        <div className="border-t-2 p-3 my-5">
+                            <p className="text-center">Or</p>
+                            <button onClick={handleGoogleLogIn} className="btn w-full"><FcGoogle className="text-xl"></FcGoogle>Continue With Google</button>
+                        </div>
                     </div>
                 </div>
             </div>
