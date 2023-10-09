@@ -6,17 +6,16 @@ import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
     const [errorMessage, setErrorMessage] = useState('')
-    const { creatUser, logInWithGoogle } = useContext(authContext)
+    const { creatUser, logInWithGoogle} = useContext(authContext)
 
-
-    const handleGoogleLogIn = () =>{
+    const handleGoogleLogIn = () => {
         logInWithGoogle()
-        .then(result => {
-            console.log(result.message)
-        })
-        .catch(error => {
-            console.log(error.message)
-        })
+            .then(result => {
+                console.log(result.message)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
 
     const handleRegisterForm = (e) => {
@@ -30,10 +29,10 @@ const Register = () => {
         if (password.length < 6) {
             setErrorMessage("Please give 6 character password or more.")
             return;
-        }else if (! /[A-Z]/.test(password)){
+        } else if (! /[A-Z]/.test(password)) {
             setErrorMessage("Please add any upperchase character")
             return;
-        }else if (! /[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)){
+        } else if (! /[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)) {
             setErrorMessage("Please add any speacial character")
             return;
         }
