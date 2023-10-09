@@ -7,9 +7,9 @@ const Header = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <h1 className="mb-5 text-5xl font-bold">Discover Your Path to Wellness</h1>
+                        <p className="mb-5">Explore a world of holistic health, mindfulness, fitness, and self-care. Join us in nurturing your mind, body, and soul at our wellness events and retreats. Embrace a journey towards balance, vitality, and inner peace.</p>
+                        <button className="btn btn-primary">Get Register</button>
                     </div>
                 </div>
             </div>
