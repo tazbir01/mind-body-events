@@ -4,15 +4,17 @@ import { authContext } from "../../../Provider/AuthProvder";
 
 
 const Navbar = () => {
-    const {user, userLogOut} = useContext(authContext)
+    const { user, userLogOut } = useContext(authContext)
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="/profile">Profile</NavLink></li>
     </>
 
-    const handleLogOut = e =>{
+    const handleLogOut = e => {
         e.preventDefault()
         userLogOut()
     }
@@ -28,20 +30,24 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="py-2 px-5 rounded-lg normal-case text-xl font-semibold bg-slate-500 text-white">MindBodyEvents</a>
+                <Link to="/" className="py-2 px-5 rounded-lg normal-case text-xl font-semibold bg-slate-500 text-white">MindBodyEvents</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end ">
                 {
-                    user 
-                    ?  <a onClick={handleLogOut} className="btn">Logout</a>
-                    : <Link className="btn" to="/login">Login</Link>
+                    user
+                        ? <div className="flex items-center gap-3 bg-slate-300 px-4 rounded-xl">
+                            <img className="w-10 rounded-lg" src={user.photoURL} alt="" />
+                            <p className="text-xl font-medium">{user.displayName}</p>
+                            <a onClick={handleLogOut} className="btn">Logout</a>
+                         </div>
+                        : <Link className="btn" to="/login">Login</Link>
                 }
-               
+
             </div>
         </div>
     );

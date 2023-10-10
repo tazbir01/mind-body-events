@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
-import Navbar from "../Shared/Navbar/Navbar";
+// import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const [errorMessage, setErrorMessage] = useState('')
@@ -20,9 +21,11 @@ const Register = () => {
 
     const handleRegisterForm = (e) => {
         e.preventDefault()
+        const name = e.target.name.value
+        const photoUrl = e.target.photo.value
         const email = e.target.email.value
         const password = e.target.password.value
-        console.log(email, password)
+        console.log(email, password, name, photoUrl)
 
         setErrorMessage('')
 
@@ -40,6 +43,15 @@ const Register = () => {
         creatUser(email, password)
             .then(result => {
                 console.log(result.user)
+
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photoUrl
+                })
+                .then(console.log('Profile updated'))
+                .catch(error =>{
+                    console.log(error.message)
+                })
             })
             .catch(error => {
                 console.log(error.message)
@@ -48,7 +60,7 @@ const Register = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <div className="flex flex-col bg-base-200">
                 <div className=" flex-col ">
                     <div className="text-center">
@@ -61,6 +73,12 @@ const Register = () => {
                                     <span className="label-text">Name</span>
                                 </label>
                                 <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo url</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="url..." className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">

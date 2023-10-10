@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import OurService from "../Section/OurService/OurService";
 import Header from "../Shared/Header/Header";
-import Navbar from "../Shared/Navbar/Navbar";
+// import Navbar from "../Shared/Navbar/Navbar";
 import AboutUs from "../Section/AboutUs/AboutUs";
 import FeaturedSection from "../Section/FeaturedSection/FeaturedSection";
 
@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <Header></Header>
             {/* service section */}
             <h2 className="text-4xl font-bold text-center mt-20 mb-10">Services</h2>

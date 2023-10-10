@@ -12,6 +12,8 @@ import Register from './Pages/Register/Register';
 import ServiceDetails from './Pages/Section/ServiceDetails/ServiceDetails';
 import AuthProvder from './Provider/AuthProvder';
 import PrivateRoute from './PrivatRoute/PrivateRoute';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Profile from './Pages/Profile/Profile';
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader: () => fetch("/public/data.json")
+      },
+      {
+        path:"/dashboard",
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path:"/profile",
+        element: <Profile></Profile>
       },
       {
         path: "/login",

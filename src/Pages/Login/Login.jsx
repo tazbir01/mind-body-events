@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import Navbar from "../Shared/Navbar/Navbar";
+// import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -41,7 +41,7 @@ const Login = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
+            
             <div className=" min-h-screen flex flex-col bg-base-200 ">
                 <div className=" flex-col ">
                     <div className="text-center">
