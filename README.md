@@ -1,8 +1,10 @@
-# React + Vite
+# MindBodyEvents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Speacial Features and Functionalities of this Projects
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* It is a single page application.
+* In this project have login and register option.
+* You can not see event details, profile and dashboard without login.
+* After your login you can see your Photo and name on navbar that gave you when register.
+* For each event card have specific button That show you details of this event.
+* Event details you can not see without login. 

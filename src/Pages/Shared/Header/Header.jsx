@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -9,7 +10,7 @@ const Header = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Discover Your Path to Wellness</h1>
                         <p className="mb-5">Explore a world of holistic health, mindfulness, fitness, and self-care. Join us in nurturing your mind, body, and soul at our wellness events and retreats. Embrace a journey towards balance, vitality, and inner peace.</p>
-                        <button className="btn btn-primary">Get Register</button>
+                        <Link to="/register"><button className="btn btn-primary">Get Register</button></Link>
                     </div>
                 </div>
             </div>
