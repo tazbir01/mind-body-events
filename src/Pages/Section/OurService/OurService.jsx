@@ -5,7 +5,7 @@ const OurService = ({service}) => {
     const {name, image, location, cost, id} = service
 
     return (
-        <div className="border p-3 space-y-2" data-aos="flip-up"
+        <div className="border p-3 space-y-2 bg-slate-200 rounded-lg" data-aos="flip-up"
         >
             <img src={image} alt="" />
             <h4 className="text-xl font-bold">{name}</h4>

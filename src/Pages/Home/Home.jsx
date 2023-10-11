@@ -10,11 +10,13 @@ const Home = () => {
 
     return (
         <div>
-            
+
             <Header></Header>
             {/* service section */}
-            <h2 className="text-4xl font-bold text-center mt-20 mb-10" data-aos="flip-up">Services</h2>
-            <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            <div className="p-10">
+            <h2 className="text-4xl font-bold bg-slate-400 text-white rounded-lg text-center mt-20 mb-10" data-aos="flip-up">Services</h2>
+            </div>
+            <div className=" max-w-6xl mx-auto grid md:grid-cols-3 gap-5 ">
                 {
                     services.map(service => <OurService key={service.id} service={service}></OurService>)
                 }
@@ -27,7 +29,7 @@ const Home = () => {
             <AboutUs></AboutUs>
 
             {/* footer section */}
-            <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+            <footer className="footer footer-center p-10 bg-slate-300 text-base-content rounded">
                 <nav className="grid grid-flow-col gap-4">
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>

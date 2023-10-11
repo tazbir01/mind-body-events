@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <div>
-            <div className="hero min-h-[70vh]" style={{ backgroundImage: 'url("https://i.ibb.co/YbZj7nF/jose-vazquez-UUf5nxh-Eh-As-unsplash.jpg")', backgroundSize: "cover" }}>
+            <div className="hero min-h-[70vh] bg-cover" style={{ backgroundImage: 'url("https://i.ibb.co/YbZj7nF/jose-vazquez-UUf5nxh-Eh-As-unsplash.jpg")', backgroundSize: "cover" }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md" data-aos="fade-down"

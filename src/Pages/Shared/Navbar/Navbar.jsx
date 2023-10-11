@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 max-w-6xl mx-auto" data-aos="fade-down">
+        <div className="navbar bg-base-300" data-aos="fade-down">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,17 +36,16 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end ">
+            <div className="navbar-end">
                 {
                     user
                         ? <div className="flex items-center gap-3 bg-slate-300 md:px-4 rounded-full p-2">
-                            <img className="md:w-10 md:h-10 w-5 h-5 rounded-full" src={user.photoURL} alt="" />
+                            <img className="md:w-10 md:h-10 w-10 h-10 rounded-full" src={user.photoURL} alt="" />
                             <p className="hidden md:block md:text-xl font-medium">{user.displayName}</p>
                             <a onClick={handleLogOut} className="hidden lg:block border-l-2 pl-2">Logout</a>
                         </div>
                         : <Link className="btn" to="/login">Login</Link>
                 }
-
             </div>
         </div>
     );
