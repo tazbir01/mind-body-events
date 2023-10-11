@@ -1,18 +1,21 @@
 import { useContext, useState } from "react";
-// import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { updateProfile } from "firebase/auth";
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const [errorMessage, setErrorMessage] = useState('')
     const { creatUser, logInWithGoogle} = useContext(authContext)
+    const location = useLocation()
 
     const handleGoogleLogIn = () => {
         logInWithGoogle()
             .then(result => {
                 console.log(result.message)
+                toast.success('Login With Google successfull.',{position:"top-center"})
+                Navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
                 console.log(error.message)
@@ -52,6 +55,7 @@ const Register = () => {
                 .catch(error =>{
                     console.log(error.message)
                 })
+                toast.success('Register Successfull. Now login', {position:"top-center"})
             })
             .catch(error => {
                 console.log(error.message)
@@ -60,7 +64,6 @@ const Register = () => {
 
     return (
         <div>
-            {/* <Navbar></Navbar> */}
             <div className="flex flex-col bg-base-200">
                 <div className=" flex-col ">
                     <div className="text-center">

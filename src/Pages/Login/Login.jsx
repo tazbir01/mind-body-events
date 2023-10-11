@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-// import Navbar from "../Shared/Navbar/Navbar";
 import { authContext } from "../../Provider/AuthProvder";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const { logInUser, logInWithGoogle } = useContext(authContext)
@@ -15,6 +15,8 @@ const Login = () => {
         logInWithGoogle()
         .then(result => {
             console.log(result.message)
+            toast.success('Login With Google successfull.',{position:"top-center"})
+            navigate(location?.state ? location.state : "/")
         })
         .catch(error => {
             console.log(error.message)
@@ -33,6 +35,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 navigate(location?.state ? location.state : "/")
+                toast.success('Successfully login',{position:"top-center"})
             })
             .catch(error => {
                 console.log(error.message)
@@ -41,7 +44,6 @@ const Login = () => {
     }
     return (
         <div>
-            
             <div className=" min-h-screen flex flex-col bg-base-200 ">
                 <div className=" flex-col ">
                     <div className="text-center">

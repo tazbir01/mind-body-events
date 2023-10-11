@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import OurService from "../Section/OurService/OurService";
 import Header from "../Shared/Header/Header";
-// import Navbar from "../Shared/Navbar/Navbar";
 import AboutUs from "../Section/AboutUs/AboutUs";
 import FeaturedSection from "../Section/FeaturedSection/FeaturedSection";
 
@@ -11,10 +10,10 @@ const Home = () => {
 
     return (
         <div>
-            {/* <Navbar></Navbar> */}
+            
             <Header></Header>
             {/* service section */}
-            <h2 className="text-4xl font-bold text-center mt-20 mb-10">Services</h2>
+            <h2 className="text-4xl font-bold text-center mt-20 mb-10" data-aos="flip-up">Services</h2>
             <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
                 {
                     services.map(service => <OurService key={service.id} service={service}></OurService>)

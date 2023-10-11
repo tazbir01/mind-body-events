@@ -8,10 +8,8 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        {/* <li><NavLink to="/register">Register</NavLink></li> */}
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         <li><NavLink to="/profile">Profile</NavLink></li>
-        {/* <li><NavLink to="/login">Login</NavLink></li> */}
     </>
 
     const handleLogOut = e => {
@@ -20,7 +18,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 max-w-6xl mx-auto">
+        <div className="navbar bg-base-100 max-w-6xl mx-auto" data-aos="fade-down">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,10 +38,10 @@ const Navbar = () => {
             <div className="navbar-end ">
                 {
                     user
-                        ? <div className="flex items-center gap-3 bg-slate-300 px-4 rounded-xl">
-                            <img className="w-10 rounded-lg" src={user.photoURL} alt="" />
+                        ? <div className="flex items-center gap-3 bg-slate-300 px-4 rounded-full p-2">
+                            <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
                             <p className="text-xl font-medium">{user.displayName}</p>
-                            <a onClick={handleLogOut} className="btn">Logout</a>
+                            <a onClick={handleLogOut} className="border-l-2 pl-2">Logout</a>
                          </div>
                         : <Link className="btn" to="/login">Login</Link>
                 }
