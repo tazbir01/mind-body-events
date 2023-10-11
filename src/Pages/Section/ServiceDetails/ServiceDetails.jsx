@@ -13,8 +13,8 @@ const ServiceDetails = () => {
     const { name, description, image, what_to_expect, location, organize_date } = serviceDetails;
 
     return (
-        <div className="grid md:grid-cols-4 gap-5 max-w-6xl mx-auto">
-            <div className="col-span-3 p-10">
+        <div className="md:grid md:grid-cols-4 gap-5 max-w-6xl mx-auto mt-20">
+            <div className="col-span-3 p-10 bg-slate-200 rounded-lg">
                 <div className="flex justify-center">
                     <img className="lg:max-w-2xl" src={image} alt="" />
                 </div>
@@ -24,7 +24,7 @@ const ServiceDetails = () => {
                 <p className="text-slate-500 font-semibold">{what_to_expect}</p>
             </div>
             <div>
-                <div className="border p-3">
+                <div className="md:border p-3 bg-slate-200 rounded-lg">
                     <h2 className="text-lg font-semibold">Date & Time</h2>
                     <div className="flex">
                         <BiTime className="text-3xl mr-2"></BiTime>

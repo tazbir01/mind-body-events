@@ -5,8 +5,8 @@ import { BiEdit } from "react-icons/bi";
 const Profile = () => {
     const { user } = useContext(authContext)
     return (
-        <div className=" max-w-6xl mx-auto mt-20 border">
-            <h2 className="text-3xl font-bold">Profile information</h2>
+        <div className=" max-w-6xl mx-auto my-20  md:border">
+            <h2 className="text-3xl font-bold text-center md:text-left">Profile information</h2>
             <div className="mt-10 border p-5 flex gap-10">
                 <img className="w-32 h-32 rounded-full" src={user.photoURL} alt="" />
                 <div>

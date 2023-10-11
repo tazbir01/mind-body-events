@@ -26,9 +26,10 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {links}
+                        <li><Link onClick={handleLogOut}>Logout</Link></li>
                     </ul>
                 </div>
-                <Link to="/" className="py-2 px-5 rounded-lg normal-case text-xl font-semibold bg-slate-500 text-white">MindBodyEvents</Link>
+                <Link to="/" className=" py-2 px-5 rounded-lg normal-case md:text-xl font-semibold bg-slate-500 text-white">MindBodyEvents</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -38,11 +39,11 @@ const Navbar = () => {
             <div className="navbar-end ">
                 {
                     user
-                        ? <div className="flex items-center gap-3 bg-slate-300 px-4 rounded-full p-2">
-                            <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
-                            <p className="text-xl font-medium">{user.displayName}</p>
-                            <a onClick={handleLogOut} className="border-l-2 pl-2">Logout</a>
-                         </div>
+                        ? <div className="flex items-center gap-3 bg-slate-300 md:px-4 rounded-full p-2">
+                            <img className="md:w-10 md:h-10 w-5 h-5 rounded-full" src={user.photoURL} alt="" />
+                            <p className="hidden md:block md:text-xl font-medium">{user.displayName}</p>
+                            <a onClick={handleLogOut} className="hidden lg:block border-l-2 pl-2">Logout</a>
+                        </div>
                         : <Link className="btn" to="/login">Login</Link>
                 }
 
